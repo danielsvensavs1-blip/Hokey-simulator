@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="apple-touch-icon.png" type="image/png">
+
+<link rel="stylesheet" href="styles.css"><title>Hockey Simulator Game</title>
+  <style>
+    body {
+      
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding-top: 100px;
+      font-family: Arial, sans-serif;
+      background-color: #101820;
+    }
+
+    button {
+      font-size: 32px;
+      color: white;
+      background-color: orange;
+      border: none;
+      padding: 20px 40px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(113, 113, 113, 0.85);
+      color: #fff;
+      padding: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    #cookie-banner button {
+      margin-left: 10px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #cookie-banner button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+    <button onclick="startGame()">Play Hockey Simulator</button>
+    <div id="cookie-banner"style="display:none;">We use cookies to improve your experience. <br>
+
+    <strong>Disclaimer:</strong> This simulator is created for <strong>educational and entertainment purposes only.</strong>  
+
+    We are <strong>not responsible or liable</strong> for any real-world betting or financial decisions based on this tool.  
+
+    <button onclick="acceptCookies()">Got it!</button></div>
+    <script>
+
+    function startGame() {
+
+      alert("Welcome to the Hockey Simulator!");
+
+      window.location.href = "tournaments.html"; 
+
+    }
+
+</script>
+<script src="cookie.js"></script>
+
+</body>
+</html>
 
