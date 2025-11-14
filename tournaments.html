@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose the Tournament</title>
+    <style>
+        body {
+            background-color: #101820;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+
+        .tournament-button {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 22px;
+            background-color: orange;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tournament-button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose the Tournament</h1>
+
+    <button class="tournament-button" onclick="location.href='Euro_countries.html'">Eurocup</button>
+    <button class="tournament-button" onclick="location.href='iihf.html'">iihf</button>
+    <button class="tournament-button" onclick="location.href='World_cup.html'">World Cup</button>
+    <button class="tournament-button" onclick="location.href='Olympic_games.html'">Olympic Games</button>
+    <button class="tournament-button" onclick="location.href='6_team_round_robin.html'">6-Team Round Robin</button>
+</body>
+</html>
