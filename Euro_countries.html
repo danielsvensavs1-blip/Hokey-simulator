@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Euro Countries Drag & Drop</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #101820;
+    color: white;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .countries, .groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+  }
+  .countries{
+border: 2px dashed #fff;
+    border-radius: 8px;
+  }
+
+  .country {
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #1f1f1f;
+    border-radius: 6px;
+    
+  }
+
+  .country img {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .group {
+    width: 200px;
+    min-height: 150px;
+    border: 2px dashed #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .group h3 {
+    margin: 5px 0 10px 0;
+  }
+
+  .calendar-button {
+            display: block;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 22px;
+            background-color: orange;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .calendar-button:hover {
+            background-color: darkorange;
+        }
+
+</style>
+</head>
+<body>
+
+<h2>Drag countries into groups (max 4 per group)</h2>
+
+<div class="countries" id="countries">
+
+  <!-- Full list of countries -->
+<div class="country" draggable="true" id="russia"><img src="https://flagcdn.com/w40/ru.png" alt="Russia" draggable="false">Russia</div>
+<div class="country" draggable="true" id="sweden"><img src="https://flagcdn.com/w40/se.png" alt="Sweden" draggable="false">Sweden</div>
+<div class="country" draggable="true" id="finland"><img src="https://flagcdn.com/w40/fi.png" alt="Finland" draggable="false">Finland</div>
+<div class="country" draggable="true" id="czechia"><img src="https://flagcdn.com/w40/cz.png" alt="Czechia" draggable="false">Czechia</div>
+<div class="country" draggable="true" id="germany"><img src="https://flagcdn.com/w40/de.png" alt="Germany" draggable="false">Germany</div>
+<div class="country" draggable="true" id="switzerland"><img src="https://flagcdn.com/w40/ch.png" alt="Switzerland" draggable="false">Switzerland</div>
+<div class="country" draggable="true" id="latvia"><img src="https://flagcdn.com/w40/lv.png" alt="Latvia" draggable="false">Latvia</div>
+<div class="country" draggable="true" id="slovakia"><img src="https://flagcdn.com/w40/sk.png" alt="Slovakia" draggable="false">Slovakia</div>
+<div class="country" draggable="true" id="denmark"><img src="https://flagcdn.com/w40/dk.png" alt="Denmark" draggable="false">Denmark</div>
+<div class="country" draggable="true" id="norway"><img src="https://flagcdn.com/w40/no.png" alt="Norway" draggable="false">Norway</div>
+<div class="country" draggable="true" id="austria"><img src="https://flagcdn.com/w40/at.png" alt="Austria" draggable="false">Austria</div>
+<div class="country" draggable="true" id="belarus"><img src="https://flagcdn.com/w40/by.png" alt="Belarus" draggable="false">Belarus</div>
+<div class="country" draggable="true" id="kazakhstan"><img src="https://flagcdn.com/w40/kz.png" alt="Kazakhstan" draggable="false">Kazakhstan</div>
+<div class="country" draggable="true" id="france"><img src="https://flagcdn.com/w40/fr.png" alt="France" draggable="false">France</div>
+<div class="country" draggable="true" id="slovenia"><img src="https://flagcdn.com/w40/si.png" alt="Slovenia" draggable="false">Slovenia</div>
+<div class="country" draggable="true" id="italy"><img src="https://flagcdn.com/w40/it.png" alt="Italy" draggable="false">Italy</div>
+<div class="country" draggable="true" id="great-britain"><img src="https://flagcdn.com/w40/gb.png" alt="Great Britain" draggable="false">Great Britain</div>
+<div class="country" draggable="true" id="hungary"><img src="https://flagcdn.com/w40/hu.png" alt="Hungary" draggable="false">Hungary</div>
+<div class="country" draggable="true" id="poland"><img src="https://flagcdn.com/w40/pl.png" alt="Poland" draggable="false">Poland</div>
+<div class="country" draggable="true" id="romania"><img src="https://flagcdn.com/w40/ro.png" alt="Romania" draggable="false">Romania</div>
+<div class="country" draggable="true" id="ukraine"><img src="https://flagcdn.com/w40/ua.png" alt="Ukraine" draggable="false">Ukraine</div>
+<div class="country" draggable="true" id="netherlands"><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands" draggable="false">Netherlands</div>
+<div class="country" draggable="true" id="belgium"><img src="https://flagcdn.com/w40/be.png" alt="Belgium" draggable="false">Belgium</div>
+<div class="country" draggable="true" id="portugal"><img src="https://flagcdn.com/w40/pt.png" alt="Portugal" draggable="false">Portugal</div>
+<div class="country" draggable="true" id="spain"><img src="https://flagcdn.com/w40/es.png" alt="Spain" draggable="false">Spain</div>
+<div class="country" draggable="true" id="croatia"><img src="https://flagcdn.com/w40/hr.png" alt="Croatia" draggable="false">Croatia</div>
+<div class="country" draggable="true" id="serbia"><img src="https://flagcdn.com/w40/rs.png" alt="Serbia" draggable="false">Serbia</div>
+<div class="country" draggable="true" id="greece"><img src="https://flagcdn.com/w40/gr.png" alt="Greece" draggable="false">Greece</div>
+<div class="country" draggable="true" id="turkey"><img src="https://flagcdn.com/w40/tr.png" alt="Turkey" draggable="false">Turkey</div>
+<div class="country" draggable="true" id="bulgaria"><img src="https://flagcdn.com/w40/bg.png" alt="Bulgaria" draggable="false">Bulgaria</div>
+<div class="country" draggable="true" id="iceland"><img src="https://flagcdn.com/w40/is.png" alt="Iceland" draggable="false">Iceland</div>
+<div class="country" draggable="true" id="ireland"><img src="https://flagcdn.com/w40/ie.png" alt="Ireland" draggable="false">Ireland</div>
+
+</div>
+
+<div class="groups">
+  <div class="group" id="groupA"><h3>Group A</h3></div>
+  <div class="group" id="groupB"><h3>Group B</h3></div>
+  <div class="group" id="groupC"><h3>Group C</h3></div>
+  <div class="group" id="groupD"><h3>Group D</h3></div>
+</div>
+
+<div id="player-guesses" style="text-align:center; margin: 20px 0;">
+
+  <h3>Guess the Home Country(s)</h3>
+  <!-- For simplicity, allow choosing up to 2 home countries -->
+  <select id="homeCountry1">
+    <option value="">Select first home country</option>
+    <!-- Options will be populated dynamically -->
+  </select>
+
+  <select id="homeCountry2">
+    <option value="">Select second home country (optional)</option>
+    <!-- Options will be populated dynamically -->
+  </select>
+
+  <h3>Guess the Winner</h3>
+  <select id="winnerCountry">
+    <option value="">Select the winner country</option>
+    <!-- Options will be populated dynamically -->
+  </select>
+
+  <button id="submitGuesses" style="margin-top:15px; padding:10px 20px; font-size:16px;">
+    Submit Guesses
+  </button>
+</div>
+
+
+<button class="calendar-button">Play</button>
+</body>
+</html>
 
