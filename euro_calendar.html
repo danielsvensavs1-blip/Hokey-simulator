@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Euro Cup Simulation</title>
+<style>
+  body { background:#101820; color:white; font-family:Arial,sans-serif; padding:20px; }
+  .tweak-panel { background:#222; border:1px solid #fff; padding:10px; margin-bottom:20px; border-radius:6px; }
+  .tweak-panel label { display:block; margin:5px 0; }
+  input[type=number] { width:50px; }
+  .button { padding:10px 20px; margin:5px; cursor:pointer; background:orange; border:none; border-radius:6px; color:white; }
+  .champion { color:lime; font-weight:bold; font-size:1.5rem; margin-bottom:15px; }
+  .calendar-day { border:1px solid #fff; padding:5px; margin:3px 0; border-radius:5px; background:#1f1f1f; }
+  .team { display:flex; align-items:center; gap:5px; }
+</style>
+</head>
+<body>
+
+<h2>Euro Cup Simulation</h2>
+
+<div class="tweak-panel" id="tweakPanel">
+  <h4>Global Settings</h4>
+  <label>Home Boost: <input type="number" id="homeBoost" step="0.01" value="0.1"></label>
+  <label>OT Weak-Strong: <input type="number" id="otWS" step="0.01" value="0.1"></label>
+  <label>OT Medium-Weak: <input type="number" id="otMW" step="0.01" value="0.35"></label>
+  <label>OT Same Strength: <input type="number" id="otSS" step="0.01" value="0.5"></label>
+
+  <h4>Country Strengths</h4>
+  <div id="countryWeights"></div>
+</div>
+
+<button class="button" id="runSim">Run Simulation</button>
+<button class="button" id="downloadJSON">Download Results</button>
+
+<div id="results"></div>
+  <script src="Simulation.js"></script>
+</body>
+</html>
+
 
